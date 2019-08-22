@@ -3,10 +3,10 @@
 import json
 import requests
 import sys
-import ConfigParser
+import configparser
 
 
-config = ConfigParser.ConfigParser()
+config = configparser.ConfigParser()
 config.read("config.txt")
 API_KEY = config.get('client', 'api_key')
 response = requests.get('https://api.macaddress.io/v1?apiKey='+API_KEY+'&output=json&search='+sys.argv[1])
