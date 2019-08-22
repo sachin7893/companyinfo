@@ -5,7 +5,7 @@ import requests
 import sys
 import configparser
 
-macaddr=str(raw_input("Please enter MAC Address: "))
+macaddr=str(input("Please enter MAC Address: "))
 config = configparser.ConfigParser()
 config.read("config.txt")
 API_KEY = config.get('client', 'api_key')
