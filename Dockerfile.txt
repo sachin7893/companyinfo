@@ -1,0 +1,5 @@
+FROM python
+RUN git clone https://github.com/sachin7893/companyinfo.git /app
+RUN pip install requests
+WORKDIR /app
+ENTRYPOINT ["python","/app/companyinfo.py"]
